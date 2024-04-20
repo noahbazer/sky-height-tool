@@ -93,6 +93,11 @@ const goToUploadHandler = () => {
   setTimeout(() => {
     frame.innerHTML = screens.tool;
     frame.style.opacity = 1;
+    const horizontalSlider = document.querySelector('.slider-zoom');
+
+    horizontalSlider.addEventListener('dragstart', (event) => {
+      event.preventDefault();
+    });
     updateLinePosition();
 
     // Set up file upload and image dragging
@@ -259,13 +264,8 @@ function handleFileUpload(event) {
   uploadImage.src = url;
 }
 
-const horizontalSlider = document.querySelector('.slider-zoom');
-
-horizontalSlider.addEventListener('dragstart', (event) => {
-  event.preventDefault();
-});
-
 function resizeUploadImage() {
+  const horizontalSlider = document.querySelector('.slider-zoom');
   const size = horizontalSlider.value / 100;
   const uploadImage = document.querySelector('.upload-image');
   uploadImage.style.transform = `scale(${size})`;

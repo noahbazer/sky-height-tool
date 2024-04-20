@@ -43,7 +43,7 @@ const screens = {
             <div class="tool-controls">
                 <div class="zoomslider">
                     <span class="fa-solid fa-minus"></span>
-                    <input type="range" min="10" max="300" value="150" class="slider slider-zoom" oninput="resizeUploadImage(event)">
+                    <input type="range" min="10" max="500" value="150" class="slider slider-zoom" oninput="resizeUploadImage(event)">
                     <span class="fa-solid fa-plus"></span>
                 </div>
                 <div class="template-buttons">

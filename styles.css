@@ -44,6 +44,17 @@ h1 {
   }
 }
 
+.splash-video video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: -1;
+}
+
 h1 {
   font-size: 1.5em;
   font-weight: 400;
@@ -52,7 +63,6 @@ h1 {
 
 body {
   overflow: hidden;
-  background-image: url('./assets/background-blur.png');
 }
 
 header {
@@ -177,7 +187,7 @@ button:hover .upload-step {
 .button {
   font-size: 2em;
   color: white;
-  background-color: #ffffff27;
+  background-color: #70707057;
   border: 1px solid white;
   padding: 10px 30px;
   border-radius: 50px;

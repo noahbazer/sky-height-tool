@@ -47,10 +47,8 @@ const screens = {
                     <span class="fa-solid fa-plus"></span>
                 </div>
                 <div class="template-buttons">
-                    <input type="radio" name="angle" value="A" id="angleA" checked oninput="handleRadioChange('a')">
-                    <label for="angleA">Angle A</label>
-                    <input type="radio" name="angle" value="B" id="angleB" oninput="handleRadioChange('b')">
-                    <label for="angleB">Angle B</label>
+                    <button class="button" id="angleA" onclick="handleRadioChange('a')">Angle A</button>
+                    <button class="button" id="angleB" onclick="handleRadioChange('b')">Angle B</button>
                 </div>
             </div>
             <div class="upload-button">

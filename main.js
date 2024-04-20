@@ -122,25 +122,35 @@ const goToUploadHandler = () => {
         let isDragging = false;
         let startX, startY, initialOffsetX, initialOffsetY;
 
-        uploadImage.addEventListener('mousedown', (event) => {
-          startX = event.clientX;
-          startY = event.clientY;
+        function startDragging(event) {
+          startX = event.clientX || event.touches[0].clientX;
+          startY = event.clientY || event.touches[0].clientY;
           initialOffsetX = uploadImage.offsetLeft;
           initialOffsetY = uploadImage.offsetTop;
           isDragging = true;
-        });
+        }
 
-        window.addEventListener('mousemove', (event) => {
+        function drag(event) {
           if (!isDragging) return;
-          const dx = event.clientX - startX;
-          const dy = event.clientY - startY;
+          event.preventDefault();
+          const dx = (event.clientX || event.touches[0].clientX) - startX;
+          const dy = (event.clientY || event.touches[0].clientY) - startY;
           uploadImage.style.left = initialOffsetX + dx + 'px';
           uploadImage.style.top = initialOffsetY + dy + 'px';
-        });
+        }
 
-        window.addEventListener('mouseup', () => {
+        function stopDragging() {
           isDragging = false;
-        });
+        }
+
+        uploadImage.addEventListener('mousedown', startDragging);
+        uploadImage.addEventListener('touchstart', startDragging);
+
+        window.addEventListener('mousemove', drag);
+        window.addEventListener('touchmove', drag);
+
+        window.addEventListener('mouseup', stopDragging);
+        window.addEventListener('touchend', stopDragging);
 
         uploadImage.addEventListener('dragstart', (event) => {
           event.preventDefault();

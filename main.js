@@ -84,7 +84,7 @@ const steps = [
   {
     title: 'Step 3',
     image: 'assets/step3.png',
-    text: 'Cross the bridge and stand in front of this lantern.',
+    text: 'Cross the bridge and stand in front of the RIGHT lantern.',
   },
   {
     title: 'Step 4',

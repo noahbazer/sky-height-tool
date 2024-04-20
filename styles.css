@@ -1,0 +1,338 @@
+* {
+  font-family: 'Red Hat Display', sans-serif;
+  color: white;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+}
+
+h1 {
+  margin: 0 0 50px 0;
+  font-size: 3em;
+  font-weight: 400;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInFromBottom {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.main {
+  width: 100%;
+  height: 100%;
+  background-image: url('./assets/background-blur.png');
+  background-size: cover;
+  backdrop-filter: blur(5px);
+}
+
+.frame {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  opacity: 0;
+  height: 40vh;
+  animation: fadeInFromBottom 1s ease-out 1s forwards;
+}
+
+.intro,
+.route {
+  height: 90%;
+  display: flex;
+}
+
+.intro {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.route {
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+}
+
+.intro-label {
+  opacity: 0;
+  animation: fadeIn 1s ease-out 2s forwards;
+}
+
+.button-begin {
+  opacity: 0;
+  animation: fadeIn 1s ease-out 2.3s forwards;
+}
+
+.button-begin span,
+.upload-step {
+  transition: all 0.3s ease;
+}
+
+.button-begin:hover span,
+button:hover .upload-step {
+  transform: translateX(10px);
+}
+
+.button {
+  font-size: 2em;
+  color: white;
+  background-color: #ffffff27;
+  border: 1px solid white;
+  padding: 10px 30px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #ffffff34;
+  transition: background-color 0.3s ease;
+}
+
+.button span,
+.upload-step {
+  font-size: 0.8em;
+}
+
+.upload-step {
+  margin-left: 10px;
+}
+
+.route-card {
+  opacity: 0;
+  animation: fadeIn 1s ease-out forwards;
+  background-color: #ffffff27;
+  border: 1px solid white;
+  padding: 20px 70px;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+}
+
+.route-card:hover {
+  background-color: #ffffff34;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.route-card h3 {
+  font-size: 2em;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.new-text {
+  margin-left: 15px;
+  font-size: 0.7em;
+  color: rgb(255, 89, 89);
+}
+
+.steps {
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 1s ease-out 1s forwards;
+}
+
+.step-frame {
+  width: 100%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.step-image {
+  max-height: 70%;
+  border: 1px solid white;
+  border-radius: 20px;
+}
+
+.step-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+
+.step-title {
+  margin-bottom: 0;
+  margin-top: 25px;
+}
+
+.step-text {
+  margin-bottom: 25px;
+  margin-top: 0;
+}
+
+.yellow {
+  color: rgb(255, 239, 132);
+}
+
+.yellow a {
+  color: rgb(255, 239, 132);
+}
+
+.tool-frame {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+
+.tool-wrapper {
+  height: 500px;
+}
+
+.tool-container {
+  position: relative;
+  height: 100%;
+  width: auto;
+  border: 1px solid white;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.template-image {
+  pointer-events: none;
+  position: relative;
+  width: 500px;
+  height: 100%;
+  border-radius: 20px;
+  z-index: 100;
+}
+
+.upload-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 500px;
+  height: 100%;
+  z-index: 1;
+  object-fit: contain;
+  cursor: move;
+}
+
+#upload-button {
+  font-size: 1.5em;
+}
+
+.slider-container {
+  display: inline-block;
+  position: relative;
+  width: 30px;
+  top: 20%;
+}
+
+.horizontal-line {
+  position: absolute;
+  width: calc(
+    100% + 470px
+  ); /* Adjust the added value based on the width of the slider */
+  height: 1px;
+  background: rgb(255, 0, 0);
+  top: 50%;
+  left: -500px; /* Adjust this value based on the width of the slider */
+  z-index: 1001;
+}
+
+.vertical {
+  position: absolute;
+  right: 0;
+  top: 0;
+  writing-mode: bt-lr; /* IE/Edge */
+  -webkit-appearance: slider-vertical; /* WebKit */
+  width: 8px;
+  height: 30%;
+  padding: 0 5px;
+}
+
+.tool-wrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+/* Styles the thumb */
+input[type='range']::-webkit-slider-thumb,
+input[type='range']::-moz-range-thumb,
+input[type='range']::-o-range-thumb {
+  height: 20px;
+  width: 20px;
+  background: #4caf50;
+  cursor: pointer;
+  border-radius: 50%;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -o-appearance: none;
+}
+
+/* Styles the track */
+input[type='range']::-webkit-slider-runnable-track,
+input[type='range']::-moz-range-track,
+input[type='range']::-o-range-track {
+  width: 100%;
+  height: 10px;
+  cursor: pointer;
+  background: #ddd;
+  border-radius: 5px;
+}
+
+.example,
+.results {
+  width: 250px;
+  background-color: #ffffff27;
+  border: 1px solid white;
+  border-radius: 20px;
+  padding: 20px 30px;
+  margin-top: 20px;
+}
+
+.example img {
+  width: 200px;
+  height: 200px;
+}
+
+.slider-zoom {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+#file-input {
+  display: none;
+}

@@ -79,7 +79,7 @@ const steps = [
   {
     title: 'Step 2',
     image: 'assets/step2.jpg',
-    text: `Go to this spot in Aviary Village (Home). You'll find it on the by the fountain in the village plaza.`,
+    text: `Go to this spot in Aviary Village (Home). You'll find it by the fountain in the village plaza.`,
   },
   {
     title: 'Step 3',

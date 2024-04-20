@@ -41,9 +41,17 @@ const screens = {
                 </div>
             </div>
             <div class="tool-controls">
-                <span class="fa-solid fa-minus"></span>
-                <input type="range" min="10" max="500" value="200" class="slider slider-zoom" oninput="resizeUploadImage(event)">
-                <span class="fa-solid fa-plus"></span>
+                <div class="zoomslider">
+                    <span class="fa-solid fa-minus"></span>
+                    <input type="range" min="10" max="500" value="200" class="slider slider-zoom" oninput="resizeUploadImage(event)">
+                    <span class="fa-solid fa-plus"></span>
+                </div>
+                <div class="template-buttons">
+                    <input type="radio" name="angle" value="A" id="angleA" checked>
+                    <label for="angleA">Angle A</label>
+                    <input type="radio" name="angle" value="B" id="angleB">
+                    <label for="angleB">Angle B</label>
+                </div>
             </div>
             <div class="upload-button">
                 <input type="file" id="file-input">
@@ -238,7 +246,6 @@ startButton.addEventListener('click', startButtonHandler);
 function updateLinePosition() {
   const verticalSlider = document.querySelector('.slider.vertical');
   const horizontalLine = document.querySelector('.horizontal-line');
-  const heightElements = document.querySelectorAll('.height');
   const sliderMin = parseInt(verticalSlider.min);
   const sliderMax = parseInt(verticalSlider.max);
   const sliderValue = parseInt(verticalSlider.value);
@@ -252,26 +259,41 @@ function updateLinePosition() {
     ((sliderValue - sliderMin) / (sliderMax - sliderMin)) * 100;
 
   horizontalLine.style.top = `${topPosition}px`;
-  heightElements.forEach((element) => {
-    if (sliderPercentage === 100) {
-      element.textContent = 'almost all';
-    } else if (sliderPercentage === 0) {
-      element.textContent = 'almost none';
-    } else {
-      element.textContent = `${sliderPercentage.toFixed(2)}%`;
-    }
-  });
   if (sliderPercentage === 100 || sliderPercentage === 0) {
     const resultsText = document.querySelector('.results-text');
-    resultsText.textContent = `Your height is ${
-      sliderPercentage === 100 ? 'close to max!' : ' close to minimum!'
-    }`;
+    resultsText.innerHTML = `Your height is <span style="color: #32CD32;">${
+      sliderPercentage === 100 ? 'close to max!' : 'close to minimum!'
+    }</span>`;
   } else {
     const resultsText = document.querySelector('.results-text');
-    resultsText.textContent = `Your height is ${sliderPercentage.toFixed(
+    resultsText.innerHTML = `Your height is <span class="height">${sliderPercentage.toFixed(
       2
-    )}% of the natural maximum!`;
+    )}</span>% of the natural maximum!`;
   }
+
+  const heightElements = document.querySelectorAll('.height');
+  heightElements.forEach((element) => {
+    if (sliderPercentage <= 10) {
+      element.style.color = '#32CD32'; // Lime green for values 0-10
+    } else if (sliderPercentage <= 20) {
+      element.style.color = '#9ACD32'; // Yellow green for values 20-30
+    } else if (sliderPercentage <= 30) {
+      element.style.color = '#FFFF00'; // Yellow for values 10-20
+    } else if (sliderPercentage <= 40) {
+      element.style.color = '#FFA500'; // Orange for values 30-40
+    } else if (sliderPercentage <= 50) {
+      element.style.color = '#FF0000'; // Red for values 40-50
+    } else if (sliderPercentage <= 60) {
+      element.style.color = '#FFA500'; // Orange for values 50-60
+    } else if (sliderPercentage <= 70) {
+      element.style.color = '#FFFF00'; // Yellow for values 60-70
+    } else if (sliderPercentage <= 80) {
+      element.style.color = '#9ACD32'; // Yellow green for values 70-80
+    } else {
+      element.style.color = '#32CD32'; // Lime green for values 90-100
+    }
+    element.textContent = `${sliderPercentage.toFixed(2)}%`;
+  });
 }
 
 function handleFileUpload(event) {

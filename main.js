@@ -61,7 +61,7 @@ const screens = {
         <div class="results">
             <h3>Results</h3>
             <p class="results-text">Your height is <span class="height">-</span> of the natural maximum!</p>
-            <p>What does this mean?</p>
+            <strong>What does this mean?</strong>
             <p>Out of the 4000 heights naturally available (without using temporary items or the chibi mask), your height is greater than <span class="height">-</span> of them.</p>
             <h2>Things to consider:</h2>
             <p>1. This tool is not 100% accurate. It is a rough estimate based on the height of the lanterns.</p>

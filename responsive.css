@@ -16,11 +16,13 @@
   body {
     overflow-x: hidden;
     overflow-y: auto;
-    height: 100%;
     width: 100%;
   }
 
   header {
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 90%;
     max-width: 100%;
     height: 50px;
@@ -28,6 +30,11 @@
     justify-content: space-between;
     align-items: center;
     padding: 10px 30px;
+  }
+
+  .scrolled {
+    background-color: #ffffff27;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
 
   .route-card h3 {
@@ -85,8 +92,9 @@
 
   .tool-frame {
     flex-direction: column;
-    gap: 5px;
+    gap: 0px;
     padding-bottom: 50px;
+    padding-top: 70px;
   }
 
   .middle-container {

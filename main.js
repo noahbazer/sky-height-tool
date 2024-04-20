@@ -1,3 +1,17 @@
+const header = document.querySelector('.header');
+console.log(header);
+
+console.log('Script started');
+window.addEventListener('scroll', function () {
+  if (window.scrollY > 0) {
+    console.log('Adding scrolled class');
+    header.classList.add('scrolled');
+  } else {
+    console.log('Removing scrolled class');
+    header.classList.remove('scrolled');
+  }
+});
+
 const screens = {
   route: `
     <div class="route">

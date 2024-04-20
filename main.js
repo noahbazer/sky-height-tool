@@ -47,9 +47,9 @@ const screens = {
                     <span class="fa-solid fa-plus"></span>
                 </div>
                 <div class="template-buttons">
-                    <input type="radio" name="angle" value="A" id="angleA" checked>
+                    <input type="radio" name="angle" value="A" id="angleA" checked oninput="handleRadioChange('a')">
                     <label for="angleA">Angle A</label>
-                    <input type="radio" name="angle" value="B" id="angleB">
+                    <input type="radio" name="angle" value="B" id="angleB" oninput="handleRadioChange('b')">
                     <label for="angleB">Angle B</label>
                 </div>
             </div>
@@ -309,3 +309,12 @@ function resizeUploadImage() {
   const uploadImage = document.querySelector('.upload-image');
   uploadImage.style.transform = `scale(${size})`;
 }
+
+const handleRadioChange = (angle) => {
+  const templateImage = document.querySelector('.template-image');
+  if (angle === 'a') {
+    templateImage.src = 'assets/lanterntemplate.png';
+  } else {
+    templateImage.src = 'assets/lanterntemplateb.png';
+  }
+};

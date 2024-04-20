@@ -1,16 +1,3 @@
-const video = document.querySelector('.splash-video video');
-
-// Function to update the height of the video
-function updateVideoHeight() {
-  video.style.height = window.innerHeight + 'px';
-}
-
-// Update the height of the video when the page loads
-updateVideoHeight();
-
-// Update the height of the video whenever the window is resized
-window.addEventListener('resize', updateVideoHeight);
-
 const screens = {
   route: `
     <div class="route">

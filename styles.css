@@ -67,6 +67,7 @@ nav a {
   transition: all 0.3s ease;
   position: relative;
   text-decoration: none;
+  font-weight: 300;
 }
 
 nav a:hover {
@@ -88,8 +89,10 @@ nav a::after {
   font-family: 'Red Hat Display', sans-serif; /* Add this line */
   white-space: nowrap;
 }
+
 nav a:hover::after {
   display: block;
+  font-weight: 300;
 }
 
 .main {

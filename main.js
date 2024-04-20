@@ -259,8 +259,14 @@ function handleFileUpload(event) {
   uploadImage.src = url;
 }
 
-function resizeUploadImage(event) {
-  const size = event.target.value / 100; // Adjust this value as needed
+const horizontalSlider = document.querySelector('.slider-zoom');
+
+horizontalSlider.addEventListener('dragstart', (event) => {
+  event.preventDefault();
+});
+
+function resizeUploadImage() {
+  const size = horizontalSlider.value / 100;
   const uploadImage = document.querySelector('.upload-image');
   uploadImage.style.transform = `scale(${size})`;
 }

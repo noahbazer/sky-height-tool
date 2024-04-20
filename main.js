@@ -141,6 +141,16 @@ const goToUploadHandler = () => {
           isDragging = false;
         }
 
+        document.addEventListener(
+          'touchmove',
+          function (event) {
+            if (isDragging) {
+              event.preventDefault();
+            }
+          },
+          { passive: false }
+        );
+
         uploadImage.addEventListener('mousedown', startDragging);
         uploadImage.addEventListener('touchstart', startDragging);
 

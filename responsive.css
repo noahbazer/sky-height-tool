@@ -71,7 +71,11 @@
   nav {
     display: flex;
     flex-direction: row;
-    gap: 20px;
+    gap: 15px;
+  }
+
+  nav a {
+    font-size: 1.2em;
   }
 
   .route {

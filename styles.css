@@ -262,7 +262,7 @@ button:hover .upload-step {
 }
 
 .step-image {
-  max-width: 80%;
+  max-width: 60%;
   max-height: 30%;
   border: 1px solid white;
   border-radius: 20px;

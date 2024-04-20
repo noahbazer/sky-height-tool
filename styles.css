@@ -52,11 +52,13 @@ h1 {
 
 body {
   overflow: hidden;
+  background-image: url('./assets/background-blur.png');
 }
 
 header {
+  box-sizing: border-box;
   max-width: 100%;
-  height: 50px;
+  height: 70px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -107,7 +109,6 @@ nav a:hover::after {
 .main {
   width: 100%;
   height: 100%;
-  background-image: url('./assets/background-blur.png');
   background-size: cover;
   backdrop-filter: blur(5px);
 }

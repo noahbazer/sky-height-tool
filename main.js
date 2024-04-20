@@ -268,7 +268,7 @@ function updateLinePosition() {
     const resultsText = document.querySelector('.results-text');
     resultsText.innerHTML = `Your height is <span class="height">${sliderPercentage.toFixed(
       2
-    )}</span>% of the natural maximum!`;
+    )}</span> of the natural maximum!`;
   }
 
   const heightElements = document.querySelectorAll('.height');

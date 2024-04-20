@@ -283,6 +283,10 @@ button:hover .upload-step {
   overflow: hidden; /* This ensures that the video doesn't overflow the container */
 }
 
+.dislink2 {
+  color: rgb(255, 238, 163);
+}
+
 .example-vid {
   position: absolute;
   top: 0;

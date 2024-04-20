@@ -66,9 +66,9 @@ const screens = {
             <strong>What does this mean?</strong>
             <p>Out of the 4000 heights naturally available (without using temporary items or the chibi mask), your height is greater than <span class="height">-</span> of them.</p>
             <h2>Things to consider:</h2>
-            <p>1. This tool is not 100% accurate. It is a rough estimate based on the height of the lanterns.</p>
-            <p>2. There is a rumor that each player has a unique height modifier that affects their height. This tool does not (and cannot) account for that.</p>
-            <p>3. Using hundreds of potions to get the perfect height is not recommended. It is expensive and time-consuming, and may not be rewarding.</p>
+            <p>1. The tool is driven by data from other users. You can improve it's accuracy by posting your results <br><a class="dislink2" href="https://discord.gg/Qy7V6K2auw">In our discord!</a></p>
+            <p>2. This tool is not 100% accurate. It is a rough estimate based on the height of the lanterns.</p>
+            <p>3. There is a rumor that each player has a unique height modifier that affects their height. This tool does not (and cannot) account for that.</p>
         </div>
     </div>
 </div>`,

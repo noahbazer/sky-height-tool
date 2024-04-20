@@ -37,7 +37,7 @@ const screens = {
                 </div>
                 <div class="slider-container">
                     <div class="horizontal-line"></div>
-                    <input type="range" min="10" max="500" value="255" class="slider vertical" oninput="updateLinePosition(event); handleHeightChange(event);">
+                    <input type="range" min="10" max="500" value="255" class="slider vertical" oninput="updateLinePosition(event);">
                 </div>
             </div>
             <div class="tool-controls">
@@ -52,7 +52,7 @@ const screens = {
         </div>
         <div class="results">
             <h3>Results</h3>
-            <p>Your height is <span class="height">-</span> of the natural maximum!</p>
+            <p class="results-text">Your height is <span class="height">-</span> of the natural maximum!</p>
             <p>What does this mean?</p>
             <p>Out of the 4000 heights naturally available (without using temporary items or the chibi mask), your height is greater than <span class="height">-</span> of them.</p>
             <h2>Things to consider:</h2>
@@ -253,8 +253,25 @@ function updateLinePosition() {
 
   horizontalLine.style.top = `${topPosition}px`;
   heightElements.forEach((element) => {
-    element.textContent = `${sliderPercentage.toFixed(2)}%`;
+    if (sliderPercentage === 100) {
+      element.textContent = 'almost all';
+    } else if (sliderPercentage === 0) {
+      element.textContent = 'almost none';
+    } else {
+      element.textContent = `${sliderPercentage.toFixed(2)}%`;
+    }
   });
+  if (sliderPercentage === 100 || sliderPercentage === 0) {
+    const resultsText = document.querySelector('.results-text');
+    resultsText.textContent = `Your height is ${
+      sliderPercentage === 100 ? 'close to max!' : ' close to minimum!'
+    }`;
+  } else {
+    const resultsText = document.querySelector('.results-text');
+    resultsText.textContent = `Your height is ${sliderPercentage.toFixed(
+      2
+    )}% of the natural maximum!`;
+  }
 }
 
 function handleFileUpload(event) {

@@ -1,17 +1,3 @@
-const header = document.querySelector('.header');
-console.log(header);
-
-console.log('Script started');
-window.addEventListener('scroll', function () {
-  if (window.scrollY > 0) {
-    console.log('Adding scrolled class');
-    header.classList.add('scrolled');
-  } else {
-    console.log('Removing scrolled class');
-    header.classList.remove('scrolled');
-  }
-});
-
 const screens = {
   route: `
     <div class="route">
@@ -114,6 +100,19 @@ const goToUploadHandler = () => {
     frame.innerHTML = screens.tool;
     frame.style.opacity = 1;
     const horizontalSlider = document.querySelector('.slider-zoom');
+    const header = document.querySelector('.header');
+    console.log(header);
+
+    console.log('Script started');
+    window.addEventListener('scroll', function () {
+      if (window.scrollY > 0) {
+        console.log('Adding scrolled class');
+        header.classList.add('scrolled');
+      } else {
+        console.log('Removing scrolled class');
+        header.classList.remove('scrolled');
+      }
+    });
 
     horizontalSlider.addEventListener('dragstart', (event) => {
       event.preventDefault();

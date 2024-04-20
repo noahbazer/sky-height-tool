@@ -66,6 +66,14 @@ header {
   z-index: 1000;
 }
 
+.header-title {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
 nav {
   display: flex;
   flex-direction: row;
@@ -366,6 +374,12 @@ button:hover .upload-step {
   top: 50%;
   left: -500px; /* Adjust this value based on the width of the slider */
   z-index: 1001;
+}
+
+.version {
+  margin: 2px;
+  font-size: 0.8em;
+  color: gray;
 }
 
 .vertical {

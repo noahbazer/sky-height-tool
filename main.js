@@ -93,6 +93,11 @@ const steps = [
   },
 ];
 
+steps.forEach((step) => {
+  const img = new Image();
+  img.src = step.image;
+});
+
 const goToUploadHandler = () => {
   frame.style.transition = 'opacity 1s';
   frame.style.opacity = 0;

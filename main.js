@@ -26,8 +26,12 @@ const screens = {
   tool: `<div class="tool">
     <div class="tool-frame">
         <div class="example">
-            <img src="assets/example.png" alt="Example">
             <p>Use the slider to adjust the size and position of the height line until it looks like the picture above.</p>
+            <img src="assets/example.png" alt="Example">
+            <p>If the template doesn't match your image, use the buttons to switch between angles.</p>
+            <div class="video-container">
+                <video class="example-vid" src="./assets/angleblurb.mp4" autoplay loop muted playsinline>
+            </div>
         </div>
         <div class="middle-container">
             <div class="tool-wrapper">

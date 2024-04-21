@@ -390,7 +390,7 @@ button:hover .upload-step {
   display: inline-block;
   position: relative;
   width: 30px;
-  top: 17%;
+  top: 18%;
 }
 
 .horizontal-line {
@@ -418,7 +418,7 @@ button:hover .upload-step {
   writing-mode: bt-lr; /* IE/Edge */
   -webkit-appearance: slider-vertical; /* WebKit */
   width: 8px;
-  height: 30%;
+  height: 25%;
   padding: 0 5px;
 }
 

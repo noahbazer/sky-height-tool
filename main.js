@@ -41,7 +41,7 @@ const screens = {
                 </div>
                 <div class="slider-container">
                     <div class="horizontal-line"></div>
-                    <input type="range" min="10" max="500" value="255" class="slider vertical" oninput="updateLinePosition(event);">
+                    <input orient="vertical" type="range" min="10" max="500" value="255" class="slider vertical" oninput="updateLinePosition(event);">
                 </div>
             </div>
             <div class="tool-controls">

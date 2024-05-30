@@ -1,6 +1,7 @@
 * {
   font-family: 'Red Hat Display', sans-serif;
   color: white;
+  border: 1px solid red;
 }
 
 body {
@@ -194,6 +195,7 @@ button:hover .upload-step {
   border-radius: 50px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .button:hover {

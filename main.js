@@ -358,3 +358,4 @@ const handleRadioChange = (angle) => {
     templateImage.src = 'assets/lanterntemplateb.png';
   }
 };
+

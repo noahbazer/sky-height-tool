@@ -420,7 +420,7 @@ button:hover .upload-step {
   writing-mode: bt-lr; /* IE/Edge */
   -webkit-appearance: slider-vertical; /* WebKit */
   width: 8px;
-  height: 25%;
+  height: 18%;
   padding: 0 5px;
 }
 

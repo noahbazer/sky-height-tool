@@ -82,7 +82,7 @@ const steps = [
   },
   {
     title: 'Step 2',
-    image: 'assets/step2.jpg',
+    image: 'assets/step2.png',
     text: `Go to this spot in Aviary Village (Home). You'll find it by the fountain in the village plaza.`,
   },
   {
@@ -358,4 +358,3 @@ const handleRadioChange = (angle) => {
     templateImage.src = 'assets/lanterntemplateb.png';
   }
 };
-

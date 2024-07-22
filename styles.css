@@ -1,5 +1,5 @@
 * {
-  font-family: 'Red Hat Display', sans-serif;
+  font-family: "Red Hat Display", sans-serif;
   color: white;
 }
 
@@ -116,7 +116,7 @@ nav a::after {
   background-color: #ffffff13;
   color: #fff;
   font-size: 0.8em; /* Adjust this value as needed */
-  font-family: 'Red Hat Display', sans-serif; /* Add this line */
+  font-family: "Red Hat Display", sans-serif; /* Add this line */
   white-space: nowrap;
 }
 
@@ -392,7 +392,7 @@ button:hover .upload-step {
   display: inline-block;
   position: relative;
   width: 30px;
-  top: 14.5%;
+  top: 16.5%;
 }
 
 .horizontal-line {
@@ -420,7 +420,7 @@ button:hover .upload-step {
   writing-mode: bt-lr; /* IE/Edge */
   -webkit-appearance: slider-vertical; /* WebKit */
   width: 8px;
-  height: 28%;
+  height: 25%;
   padding: 0 5px;
 }
 
@@ -434,9 +434,9 @@ button:hover .upload-step {
 }
 
 /* Styles the thumb */
-input[type='range']::-webkit-slider-thumb,
-input[type='range']::-moz-range-thumb,
-input[type='range']::-o-range-thumb {
+input[type="range"]::-webkit-slider-thumb,
+input[type="range"]::-moz-range-thumb,
+input[type="range"]::-o-range-thumb {
   height: 20px;
   width: 20px;
   background: #4caf50;
@@ -448,9 +448,9 @@ input[type='range']::-o-range-thumb {
 }
 
 /* Styles the track */
-input[type='range']::-webkit-slider-runnable-track,
-input[type='range']::-moz-range-track,
-input[type='range']::-o-range-track {
+input[type="range"]::-webkit-slider-runnable-track,
+input[type="range"]::-moz-range-track,
+input[type="range"]::-o-range-track {
   width: 100%;
   height: 10px;
   cursor: pointer;

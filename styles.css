@@ -336,6 +336,7 @@ button:hover .upload-step {
   border: 1px solid white;
   border-radius: 20px;
   overflow: hidden;
+  background-color: rgb(78, 78, 78);
 }
 
 .tool-controls {
@@ -349,7 +350,7 @@ button:hover .upload-step {
 .template-image {
   pointer-events: none;
   position: relative;
-  width: 500px;
+  width: 450px;
   height: 100%;
   border-radius: 20px;
   z-index: 100;
@@ -392,7 +393,7 @@ button:hover .upload-step {
   display: inline-block;
   position: relative;
   width: 30px;
-  top: 16.5%;
+  top: 30.5%;
 }
 
 .horizontal-line {
@@ -420,7 +421,7 @@ button:hover .upload-step {
   writing-mode: bt-lr; /* IE/Edge */
   -webkit-appearance: slider-vertical; /* WebKit */
   width: 8px;
-  height: 25%;
+  height: 12%;
   padding: 0 5px;
 }
 
@@ -471,6 +472,7 @@ input[type="range"]::-o-range-track {
 .example img {
   width: 200px;
   height: 200px;
+  margin-top: 30px;
 }
 
 .slider-zoom {

@@ -59,8 +59,7 @@ const screens = {
             <p>Out of the 4000 heights naturally available (without using temporary items or the chibi mask), your height is greater than <span class="height">-</span> of them.</p>
             <h2>Things to consider:</h2>
             <p>1. The tool is driven by data from other users. You can improve it's accuracy by posting your results <br><a class="dislink2" href="https://discord.gg/Qy7V6K2auw">In our discord!</a></p>
-            <p>2. This tool is not 100% accurate. It is a rough estimate based on the height of the lanterns.</p>
-            <p>3. There is a rumor that each player has a unique height modifier that affects their height. This tool does not (and cannot) account for that.</p>
+            <p>2. There is a rumor that each player has a unique height modifier that affects their height. This tool does not (and cannot) account for that.</p>
         </div>
     </div>
 </div>`,
@@ -85,7 +84,7 @@ const steps = [
   {
     title: "Step 4",
     image: "assets/step4.png",
-    text: "Take a screenshot. Don't worry if the chair swivels, this won't affect your results.",
+    text: "Take a screenshot with the hair menu open. Don't worry if the chair swivels, this won't affect your results.",
   },
 ];
 

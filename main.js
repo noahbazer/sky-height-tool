@@ -66,7 +66,7 @@ const screens = {
               <img src="./assets/slidericons.png" class="icon2">
             </div>
             <div class="results-stat">
-              <p class="results-text">Your height is <span class="height">50%</span> of the natural maximum!</p>
+              <p class="results-text">Your height is about <span class="height">50%</span> of the natural maximum!</p>
             </div>
             <h2>Things to consider:</h2>
             <p>1. The tool is driven by data from other users. You can improve it's accuracy by posting your results <br><a class="dislink2" href="https://discord.gg/Qy7V6K2auw">In our discord!</a></p>
@@ -297,22 +297,21 @@ function updateLinePosition() {
     ((sliderMax - sliderValue) / (sliderMax - sliderMin)) *
       (sliderHeight - thumbHeight) +
     thumbHeight / 2;
-  const sliderPercentage =
-    ((sliderValue - sliderMin) / (sliderMax - sliderMin)) * 100;
+  const sliderPercentage = Math.ceil(
+    ((sliderValue - sliderMin) / (sliderMax - sliderMin)) * 100
+  );
 
   horizontalLine.style.top = `${topPosition}px`;
   if (sliderPercentage === 100 || sliderPercentage === 0) {
     const resultsText = document.querySelector('.results-text');
-    resultsText.innerHTML = `Your height is <span style="color: #32CD32;">${
+    resultsText.innerHTML = `Your height is <span style="color: #60d2ff;">${
       sliderPercentage === 100
         ? 'close to the natural maximum!'
         : 'close to the natural minimum!'
     }</span>`;
   } else {
     const resultsText = document.querySelector('.results-text');
-    resultsText.innerHTML = `Your height is <span class="height">${sliderPercentage.toFixed(
-      2
-    )}</span> of the natural maximum!`;
+    resultsText.innerHTML = `Your height is about <span class="height">${sliderPercentage}</span> of the natural maximum!`;
   }
 
   const sliderThumb = document.querySelector('.slider-thumb');
@@ -326,25 +325,21 @@ function updateLinePosition() {
   const heightElements = document.querySelectorAll('.height');
   heightElements.forEach((element) => {
     if (sliderPercentage <= 10) {
-      element.style.color = '#32CD32'; // Lime green for values 0-10
+      element.style.color = '#60D2FF'; // Lime green for values 0-10
     } else if (sliderPercentage <= 20) {
-      element.style.color = '#9ACD32'; // Yellow green for values 20-30
+      element.style.color = '#32CD32'; // Yellow green for values 20-30
     } else if (sliderPercentage <= 30) {
-      element.style.color = '#FFFF00'; // Yellow for values 10-20
+      element.style.color = '#32CD32'; // Yellow for values 10-20
     } else if (sliderPercentage <= 40) {
-      element.style.color = '#FFA500'; // Orange for values 30-40
-    } else if (sliderPercentage <= 50) {
-      element.style.color = '#FF0000'; // Red for values 40-50
+      element.style.color = '#32CD32'; // Orange for values 30-40
     } else if (sliderPercentage <= 60) {
-      element.style.color = '#FFA500'; // Orange for values 50-60
-    } else if (sliderPercentage <= 70) {
-      element.style.color = '#FFFF00'; // Yellow for values 60-70
+      element.style.color = '#FFA500'; // Red for values 40-50
     } else if (sliderPercentage <= 80) {
-      element.style.color = '#9ACD32'; // Yellow green for values 70-80
+      element.style.color = '#32CD32'; // Yellow green for values 70-80
     } else {
-      element.style.color = '#32CD32'; // Lime green for values 90-100
+      element.style.color = '#60D2FF'; // Light Blue for values 90-100
     }
-    element.textContent = `${sliderPercentage.toFixed(2)}%`;
+    element.textContent = `${sliderPercentage}%`;
   });
 }
 

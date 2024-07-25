@@ -396,6 +396,11 @@ button:hover .upload-step {
   top: 30.5%;
 }
 
+/* light blue color */
+.lightblue {
+  background-color: #60d2ff;
+}
+
 .horizontal-line {
   position: absolute;
   width: calc(
@@ -412,6 +417,10 @@ button:hover .upload-step {
   margin: 2px;
   font-size: 0.8em;
   color: gray;
+}
+
+#FFFF00 {
+  color: #cefc38;
 }
 
 .vertical {
